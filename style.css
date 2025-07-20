@@ -1,3 +1,59 @@
+
+.main-footer {
+    color: #fff;
+}
+/* Add a dark overlay to the hero section */
+.hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/pexels-rsantos1232-3888151.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Prevent navbar from colliding with text */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body {
+    padding-top: 70px; /* Adjust if navbar height changes */
+}
+body {
+    background-image: url('assets/pexels-rsantos1232-3888151.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
 /*------------------------------------------------------------------
 [Master Stylesheet]
 

@@ -103,10 +103,10 @@ function updateActiveNavLink() {
 // Typing Effect
 function initializeTypingEffect() {
   const texts = [
-    'Building the Future from Kenya',
-    'Innovating with Code',
-    'Leading the Next Generation',
-    'Dreaming of MIT EECS'
+    'Future',
+    'Innovation',
+    'Dreams',
+    'Technology'
   ];
   
   let textIndex = 0;

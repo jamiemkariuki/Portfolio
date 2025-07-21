@@ -1,3 +1,135 @@
+/* Glassmorphism background for the entire page */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 34, 54, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.main-nav.container {
+    background: transparent !important;
+    box-shadow: 0 6px 32px rgba(10, 10, 30, 0.55);
+    border-radius: 0 0 18px 18px;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+.animate-item {
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s, color 0.3s;
+    background: rgba(240, 244, 250, 0.05);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 6px rgba(60,60,120,0.07);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.animate-item:hover {
+    background: rgba(226, 234, 252, 0.1);
+    color: #ffffff;
+    box-shadow: 0 4px 18px rgba(60,60,120,0.13);
+    transform: translateY(-2px) scale(1.03);
+}
+.animate-item:active {
+    background: rgba(208, 216, 232, 0.3);
+    color: #ffffff;
+    transform: scale(0.98);
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-item {
+    animation: fadeInUp 0.7s cubic-bezier(.77,.2,.32,1.01);
+}
+/* Enhanced About Page Styles */
+.about-section {
+    padding: 6rem 0;
+    background: transparent;
+}
+
+.about-content {
+    background: rgba(30, 34, 54, 0.25);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(10,10,30,0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+    border: 1.5px solid rgba(255,255,255,0.13);
+}
+
+.about-content h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: 600;
+}
+
+.about-content p {
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    font-weight: 500;
+}
+.container {
+    background: rgba(30, 34, 54, 0.25);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(10,10,30,0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+
+.container h2 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: 600;
+}
+
+.container p {
+    font-size: 1.08rem;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+    line-height: 1.65;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    font-weight: 500;
+}
+@media (max-width: 600px) {
+    .about-section, .container {
+        padding: 1.2rem 0.5rem;
+    }
+    .about-content h2, .container h2 {
+        font-size: 1.3rem;
+    }
+    .about-content p, .container p {
+        font-size: 1rem;
+    }
+}
 
 .main-footer {
     color: #fff;
@@ -20,7 +152,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/pexels-rsantos1232-3888151.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/pexels-rsantos1232-3888151.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     background-size: cover;
     z-index: 0;
@@ -39,7 +171,7 @@
     left: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.3);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -82,10 +214,10 @@ Last change:08/07/25
 :root {
     --primary-color: #0a66c2; /* LinkedIn Blue */
     --secondary-color: #333;
-    --accent-color: #f5f5f5;
-    --text-color: #333;
-    --light-gray: #f9f9f9;
-    --dark-gray: #666;
+    --accent-color: rgba(245, 245, 245, 0.1);
+    --text-color: #ffffff;
+    --light-gray: rgba(249, 249, 249, 0.1);
+    --dark-gray: rgba(102, 102, 102, 0.8);
     --white: #fff;
     --shadow: 0 4px 8px rgba(0,0,0,0.1);
     --border-radius: 8px;
@@ -320,6 +452,17 @@ ul {
     background: transparent;
 }
 
+.glass-card {
+    background: rgba(30, 34, 54, 0.25);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(10,10,30,0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2.5rem 2rem;
+    color: #ffffff;
+    border: 1.5px solid rgba(255,255,255,0.13);
+}
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -413,22 +556,21 @@ ul {
 /* 8. Blog Section */
 .blog-section {
     padding: 6rem 0;
-}
-
-.blog-grid {
-    display: grid;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 1.5rem 0;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
 .blog-post-card {
-    background: transparent;
+    background: rgba(30, 34, 54, 0.45);
     border-radius: var(--border-radius);
     box-shadow: none;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(30, 34, 54, 0.65);
 }
-
 .blog-post-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -562,10 +704,13 @@ ul {
 
 /* 11. Footer */
 .main-footer {
-    background: transparent; /* Changed to transparent */
+    background: rgba(30, 34, 54, 0.15);
     color: var(--white);
     text-align: center;
     padding: 2rem 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1.5px solid rgba(255,255,255,0.13);
 }
 
 .social-links a {

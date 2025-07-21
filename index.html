@@ -3,66 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jamie - Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="google-site-verification" content="nHUV6u4lHEef2ov7JnUfhoU812vj2-vgSC-1f6fnKSI" />
+    <title>Jamie Kariuki - Developer Portfolio</title>
+    <meta name="description" content="13-year-old developer from Kenya building the future through technology. MIT aspirant, tech innovator, and robotics club leader.">
+    <meta name="keywords" content="Jamie Kariuki, developer, Kenya, MIT, programming, robotics, technology">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="home">
-
-    <div class="page-overlay"></div>
-    <header class="main-header">
-        <nav class="main-nav container">
-            <a href="index.html" class="logo">Jamie Kariuki</a>
-            <div class="menu-toggle" id="mobile-menu">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Jamie Kariuki</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="nav-list">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="animate-item">Engineer. Innovator. Leader.</h1>
-                <p class="subtitle animate-item">A Kenyan developer on a mission to build the future.</p>
-                <a href="projects.html" class="cta-button animate-item">View My Work</a>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="about" class="about-section container">
-            <h2 class="animate-item">About Me</h2>
-            <p class="animate-item">I am a passionate 13-year-old developer from Kenya with a dream of studying Electrical Engineering and Computer Science (EECS) at MIT. I am the head of the robotics and coding club at my school and am actively learning through platforms like MIT OpenCourseWare, freeCodeCamp, and more. My goal is to become a world-class engineer and solve real-world problems in Africa using technology.</p>
-        </section>
-
-        <section id="roadmap" class="about-section container">
-            <div class="about-content glass-card">
-                <h2 class="animate-item">My Roadmap</h2>
-                <p class="animate-item">My journey is focused on building a strong foundation in EECS before I turn 16. I am currently preparing for my Checkpoint Exams in April 2026, aiming for a top score. I plan to study A-levels at 16 and continue my project-based learning to build a strong portfolio for my university applications.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles" id="particles"></div>
+            <div class="code-snippets">
+                <div class="code-snippet">console.log('Building the future');</div>
+                <div class="code-snippet">function innovate() { return 'Kenya'; }</div>
+                <div class="code-snippet">const dream = 'MIT EECS';</div>
             </div>
-        </section>
-    </main>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="typing-text" id="typing-text">Building the Future from Kenya</span>
+                </h1>
+                <p class="hero-subtitle">13-year-old Developer | MIT Aspirant | Tech Innovator</p>
+                <p class="hero-description">
+                    Passionate about solving real-world problems through technology, leading the next generation of African developers, and building a bridge between innovation and impact.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="6000">0</span>
+                        <span class="stat-label">XP Earned</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Users Served</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/profile_illustration.png" alt="Jamie Kariuki coding" class="profile-img">
+            </div>
+        </div>
+    </section>
 
-    <footer class="main-footer">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/jamiemkariuki" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/jamiemkariuki" target="_blank">LinkedIn</a>
-                <a href="https://jamiekariuki.hashnode.dev" target="_blank">Hashnode</a>
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Driven by curiosity, powered by code</p>
             </div>
-            <p>&copy; 2025 Jamie Kariuki</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Jamie Kariuki is a 13-year-old developer from Kenya with an extraordinary vision: to become a world-class engineer and drive technological innovation across Africa.
+                    </p>
+                    <div class="mission-statement">
+                        <h3>Mission Statement</h3>
+                        <p>"To leverage technology as a force for positive change in Africa, starting with education, healthcare, and economic empowerment."</p>
+                    </div>
+                    <div class="current-focus">
+                        <h3>Current Focus</h3>
+                        <ul>
+                            <li>Preparing for Checkpoint Exams (April 2026) with target top scores</li>
+                            <li>Building a comprehensive portfolio for MIT EECS application</li>
+                            <li>Leading and mentoring fellow students in coding and robotics</li>
+                            <li>Contributing to open-source projects and the global developer community</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-timeline">
+                    <h3>My Journey</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2024</div>
+                            <div class="timeline-content">
+                                <h4>Robotics Club Leadership</h4>
+                                <p>Became head of school robotics and coding club, leading 15+ members</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2024</div>
+                            <div class="timeline-content">
+                                <h4>Full-Stack Development</h4>
+                                <p>Built WorkAligner and SNSS School System serving 500+ users</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2025</div>
+                            <div class="timeline-content">
+                                <h4>MIT OCW Journey</h4>
+                                <p>Started following MIT EECS curriculum through OpenCourseWare</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2026</div>
+                            <div class="timeline-content">
+                                <h4>Checkpoint Exams</h4>
+                                <p>Target: Top scores in preparation for A-levels and university applications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Building solutions that matter</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-project="workaligner">
+                    <div class="project-image">
+                        <img src="assets/images/project_workaligner.png" alt="WorkAligner Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">WorkAligner</h3>
+                        <p class="project-description">AI-powered job and career alignment platform connecting job seekers with opportunities using intelligent matching algorithms.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">AI</span>
+                        </div>
+                        <div class="project-stats">
+                            <span class="stat">500+ Users</span>
+                            <span class="stat">95% Match Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="school-system">
+                    <div class="project-image">
+                        <img src="assets/images/project_school_system.png" alt="SNSS School System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SNSS School System</h3>
+                        <p class="project-description">Comprehensive school management system with online clearance, attendance tracking, and parent-teacher communication.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-stats">
+                            <span class="stat">80% Paperwork Reduction</span>
+                            <span class="stat">Real-time Updates</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="mit-ocw">
+                    <div class="project-image">
+                        <img src="assets/images/project_mit_ocw.png" alt="MIT OCW Coursework">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MIT OCW Coursework</h3>
+                        <p class="project-description">Collection of completed assignments and projects from MIT OpenCourseWare EECS curriculum, showcasing computer science fundamentals.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Jupyter</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Algorithms</span>
+                        </div>
+                        <div class="project-stats">
+                            <span class="stat">10+ Courses</span>
+                            <span class="stat">Academic Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Arsenal</h2>
+                <p class="section-subtitle">Constantly evolving, always learning</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <div class="skill-category active" data-category="languages">Programming Languages</div>
+                    <div class="skill-category" data-category="frameworks">Frameworks & Tools</div>
+                    <div class="skill-category" data-category="soft">Soft Skills</div>
+                </div>
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements & Milestones</h2>
+                <p class="section-subtitle">Celebrating progress, aiming higher</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>6,000+ XP in Single Session</h3>
+                    <p>Earned on Boot.dev, demonstrating rapid learning and dedication to mastering programming concepts.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Robotics Club Leadership</h3>
+                    <p>Leading 15+ active members, organizing projects, and mentoring fellow students in their coding journeys.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>300+ Lines Per File</h3>
+                    <p>Maintaining high code quality standards with comprehensive, well-documented portfolio projects.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>MIT OCW Progress</h3>
+                    <p>Actively following EECS curriculum, completing assignments, and building strong academic foundation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Thoughts</h2>
+                <p class="section-subtitle">Sharing knowledge, inspiring others</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/kenya_tech.jpg" alt="Kenya Tech Innovation">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 2025</span>
+                            <span class="blog-category">Technology</span>
+                        </div>
+                        <h3 class="blog-title">Why Africa Needs More Young Developers</h3>
+                        <p class="blog-excerpt">Exploring the potential of young African developers to drive technological innovation and solve local challenges through code.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/coding_workspace.jpg" alt="Coding Workspace">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">December 2024</span>
+                            <span class="blog-category">Learning</span>
+                        </div>
+                        <h3 class="blog-title">My Journey to MIT: A 13-Year-Old's Roadmap</h3>
+                        <p class="blog-excerpt">Documenting my preparation strategy for MIT EECS, from self-study to project building and academic excellence.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/tech_background.jpg" alt="Programming Background">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">November 2024</span>
+                            <span class="blog-category">Development</span>
+                        </div>
+                        <h3 class="blog-title">Building WorkAligner: Lessons in Full-Stack Development</h3>
+                        <p class="blog-excerpt">Technical deep-dive into creating an AI-powered job platform, from database design to user experience optimization.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Build Together</h2>
+                <p class="section-subtitle">Ready to collaborate on innovative projects?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always excited to connect with fellow developers, mentors, and innovators. Whether you're interested in collaboration, mentorship, or just want to chat about technology, I'd love to hear from you!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>jamie@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Available for collaboration</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-blog"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Jamie Kariuki. Building the future from Kenya, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="assets/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+

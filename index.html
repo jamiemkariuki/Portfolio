@@ -6,7 +6,12 @@
     <title>Jamie Kariuki - Developer Portfolio</title>
     <meta name="description" content="13-year-old developer from Kenya building the future through technology. MIT aspirant, tech innovator, and robotics club leader.">
     <meta name="keywords" content="Jamie Kariuki, developer, Kenya, MIT, programming, robotics, technology">
-    <link rel="stylesheet" href="styles.min.css">
+    <style>
+        /* Critical CSS for above-the-fold content */
+        :root{--primary-color:#00D4FF;--secondary-color:#00FF88;--dark-bg:#0A1628;--darker-bg:#1A202C;--text-primary:#FFFFFF;--text-secondary:#B0BEC5;--font-primary:'Inter',sans-serif;--transition-normal:0.3s ease}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-primary);background:var(--dark-bg);color:var(--text-primary);line-height:1.6;overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 20px}.navbar{position:fixed;top:0;left:0;right:0;background:rgba(10,22,40,0.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;transition:var(--transition-normal)}.nav-container{display:flex;justify-content:space-between;align-items:center}.nav-logo{font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}.nav-menu{display:flex;list-style:none;gap:2rem}.nav-link{color:var(--text-secondary);text-decoration:none;font-weight:500;transition:0.2s ease}.nav-link:hover{color:var(--primary-color)}.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}.hero-title{font-size:4rem;font-weight:700;line-height:1.1;margin-bottom:1rem}.hero-title .highlight{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero-subtitle{font-size:1.3rem;color:var(--text-secondary);margin-bottom:1rem}.hero-image img{width:100%;max-width:500px;border-radius:20px}@media (max-width:768px){.hero-content{grid-template-columns:1fr;text-align:center}.hero-title{font-size:2.5rem}.nav-menu{display:none}}
+    </style>
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -78,7 +83,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/images/profile_illustration.jpg" alt="Jamie Kariuki coding" class="hero-image">>
+                <img src="assets/images/profile_illustration.jpg" alt="Jamie Kariuki coding" class="hero-image" loading="lazy">>
             </div>
         </div>
     </section>
@@ -156,7 +161,7 @@
             <div class="projects-grid">
                 <div class="project-card" data-project="workaligner">
                     <div class="project-image">
-                        <img src="assets/images/project_workaligner.jpg" alt="WorkAligner Interface">                       <div class="project-overlay">
+                        <img src="assets/images/project_workaligner.jpg" alt="WorkAligner Interface" loading="lazy">                       <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                                 <a href="#" class="project-link"><i class="fab fa-github"></i></a>
@@ -181,7 +186,7 @@
 
                 <div class="project-card" data-project="school-system">
                     <div class="project-image">
-                        <img src="assets/images/project_school_system.jpg" alt="SNSS School System">
+                        <img src="assets/images/project_school_system.jpg" alt="SNSS School System" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -207,7 +212,7 @@
 
                 <div class="project-card" data-project="mit-ocw">
                     <div class="project-image">
-                        <img src="assets/images/project_mit_ocw.jpg" alt="MIT OCW Coursework">
+                        <img src="assets/images/project_mit_ocw.jpg" alt="MIT OCW Coursework" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -304,7 +309,7 @@
             <div class="blog-grid">
                 <article class="blog-card">
                     <div class="blog-image">
-                        <img src="assets/images/kenya_tech.jpg" alt="Kenya Tech Innovation">
+                       <img src="assets/images/kenya_tech.jpg" alt="Full-stack development" loading="lazy">
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
@@ -318,8 +323,7 @@
                 </article>
                 <article class="blog-card">
                     <div class="blog-image">
-                        <img src="assets/images/coding_workspace.jpg" alt="Coding Workspace">
-                    </div>
+                    <img src="assets/images/coding_workspace.jpg" alt="Young developers in Africa" loading="lazy">               </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-date">December 2024</span>
@@ -332,7 +336,7 @@
                 </article>
                 <article class="blog-card">
                     <div class="blog-image">
-                        <img src="assets/images/tech_background.jpg" alt="Programming Background">
+                       <img src="assets/images/tech_background.jpg" alt="MIT preparation journey" loading="lazy">
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
@@ -420,6 +424,7 @@
         </div>
     </footer>
 
+    <script src="lazy-loading.js"></script>
     <script src="script.min.js"></script>
 </body>
 </html>
